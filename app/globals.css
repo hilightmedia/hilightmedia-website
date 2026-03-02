@@ -1,5 +1,37 @@
 @import "tailwindcss";
 
+@tailwind utilities;
+
+@layer base {
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl font-semibold leading-snug;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl font-semibold leading-snug;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl font-semibold leading-snug;
+  }
+
+  h5 {
+    @apply text-lg md:text-xl font-medium leading-normal;
+  }
+
+  h6 {
+    @apply text-base md:text-lg font-medium leading-normal;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed text-gray-600;
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -8,19 +40,119 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom Screens */
+  --breakpoint-xs: 0px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+
+  /* Custom Colors */
+  --color-primary-50: #fff1ed;
+  --color-primary-100: #ffd6cc;
+  --color-primary-200: #ffb3a3;
+  --color-primary-300: #ff8a73;
+  --color-primary-400: #ff624a;
+  --color-primary-500: #f84d35;
+  --color-primary-600: #d63f2a;
+  --color-primary-700: #b23321;
+  --color-primary-800: #8e2719;
+  --color-primary-900: #6b1c11;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-inter);
+}
+
+.poppins {
+  font-family: var(--font-poppins);
+}
+
+.lora {
+  font-family: var(--font-lora);
+}
+
+.noto-serif {
+  font-family: var(--font-noto-serif);
+}
+
+.manrope {
+  font-family: var(--font-manrope);
+}
+
+button {
+  @apply cursor-pointer;
+}
+
+@keyframes hero-marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.hero-marquee {
+  animation: hero-marquee 28s linear infinite;
+}
+
+@keyframes marquee-ltr {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-rtl {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.brands-marquee-ltr {
+  animation: marquee-ltr 30s linear infinite;
+}
+
+.brands-marquee-rtl {
+  animation: marquee-rtl 30s linear infinite;
+}
+
+/* .brands-marquee-ltr:hover,
+.brands-marquee-rtl:hover {
+  animation-play-state: paused;
+} */
+
+@keyframes ctaRingSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cta-ring-spin {
+  animation: ctaRingSpin 25s linear infinite;
+  transform-origin: center;
+  will-change: transform;
 }
