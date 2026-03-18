@@ -10,7 +10,7 @@ export default function CtaBanner() {
       <div className="relative w-full rounded-3xl overflow-hidden min-h-115">
         {/* Background */}
         <Image
-          src="/home/ctabg.svg"
+          src="/home/cta-bg.svg"
           alt="CTA background"
           fill
           className="object-cover z-0"
