@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Founders = () => {
   return (
-    <section className="w-full mx-auto max-w-300 overflow-hidden flex flex-col py-15 px-6">
+    <section className="w-full mx-auto max-w-7xl overflow-hidden flex flex-col py-15 px-6">
       <h3 className="bg-primary-500 mt-3 w-fit mx-auto px-12 py-2 text-lg text-white hover:bg-primary-600 transition-colors rounded-2xl">
         OUR TEAM
       </h3>

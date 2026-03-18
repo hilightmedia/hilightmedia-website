@@ -12,6 +12,7 @@ import {
   MonitorSmartphone,
   Newspaper,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const IconBox = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -47,6 +48,7 @@ type Service = {
   title: string;
   desc: string;
   icon: LucideIcon;
+  href: string;
 };
 
 const icons: Record<
@@ -67,40 +69,49 @@ const services: Service[] = [
     title: "Outdoor Advertising",
     desc: "Large-format visibility in high-traffic locations for constant, high-impact exposure.",
     icon: icons.billboard,
+    href: "/services/outdoor",
   },
   {
     title: "Digital Advertising",
     desc: "Data-driven campaigns across platforms designed to maximize reach, performance, and ROI.",
     icon: icons.chart,
+    href: "/services/digital",
   },
   {
     title: "Cinema Advertising",
     desc: "High-impact storytelling on the biggest screens to captivate attention and drive brand recall.",
     icon: icons.video,
+    href: "/services/cinema",
   },
   {
     title: "Newspaper Advertising",
     desc: "Credible print placements that strengthen brand presence and market authority.",
     icon: icons.newspaper,
+    href: "/services/newspaper",
   },
   {
     title: "Influencer Marketing",
     desc: "Authentic creator partnerships that build trust and connect brands with the right audiences.",
     icon: icons.megaphone,
+    href: "/services/influencer",
   },
   {
     title: "Radio Advertising",
     desc: "Targeted audio campaigns that deliver frequency, recall, and local market reach effectively.",
     icon: icons.mic,
+    href: "/services/radio",
   },
   {
     title: "Creative & Brand Strategy",
     desc: "Strategic creative solutions tailored to your brand goals and audience behavior seamlessly.",
     icon: icons.compass,
+    href: "/services/creative-brand-strategy",
   },
 ];
 
-function ServiceCard({ title, desc, icon: Icon }: Service) {
+function ServiceCard({ title, desc, icon: Icon, href }: Service) {
+  const router = useRouter();
+
   return (
     <div className="bg-white rounded-2xl p-6 border border-black/5 shadow-[0_18px_40px_rgba(0,0,0,0.08)]">
       <IconBox>
@@ -110,7 +121,10 @@ function ServiceCard({ title, desc, icon: Icon }: Service) {
       <h4 className="mt-5 font-semibold">{title}</h4>
       <p className="mt-2 text-sm text-black/60 leading-relaxed">{desc}</p>
 
-      <button className="mt-4 text-sm font-semibold text-primary-500 hover:text-primary-600 transition-colors">
+      <button
+        onClick={() => router.push(href)}
+        className="mt-4 text-sm font-semibold text-primary-500 hover:text-primary-600 transition-colors"
+      >
         Learn more →
       </button>
     </div>
@@ -118,8 +132,9 @@ function ServiceCard({ title, desc, icon: Icon }: Service) {
 }
 
 export default function Services() {
+  const router = useRouter();
   return (
-    <section className="w-full mx-auto max-w-300 overflow-hidden flex flex-col py-15 px-6">
+    <section className="w-full mx-auto max-w-7xl overflow-hidden flex flex-col py-15 px-6">
       <h3 className="bg-primary-500 mt-3 w-fit mx-auto px-12 py-2 text-lg text-white hover:bg-primary-600 transition-colors rounded-2xl">
         SERVICES
       </h3>
@@ -141,8 +156,11 @@ export default function Services() {
                 End-to-End Branding & Advertising Solutions for Complete Brand
                 Growth
               </h6>
-              <button className="mt-5 inline-flex items-center gap-2 bg-white text-primary-500 font-semibold px-5 py-2 rounded-full hover:bg-white/90 transition-colors">
-                Enquiry Now <span aria-hidden>→</span>
+              <button
+                onClick={() => router.push("/#contact")}
+                className="mt-5 inline-flex items-center gap-2 bg-white text-primary-500 font-semibold px-5 py-2 rounded-full hover:bg-white/90 transition-colors"
+              >
+                Enquiry Now →
               </button>
             </div>
           </div>

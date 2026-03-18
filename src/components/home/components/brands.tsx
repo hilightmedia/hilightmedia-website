@@ -13,8 +13,8 @@ const firstRowLogos = [
 
 const secondRowLogos = [
   "/home/brands/tvs.png",
-  "/home/brands/agarwals.png",
-  "/home/brands/titanEye.png",
+  "/home/brands/agarwal.png",
+  "/home/brands/titan.png",
   "/home/brands/honda.png",
   "/home/brands/tata.png",
   "/home/brands/skoda.png",
@@ -23,12 +23,12 @@ const secondRowLogos = [
 
 export default function BrandsTrustSection() {
   
-  const firstRowItems = [...firstRowLogos, ...firstRowLogos];
-  const secondRowItems = [...secondRowLogos, ...secondRowLogos];
+  const firstRowItems = [...firstRowLogos, ...firstRowLogos, ...firstRowLogos];
+  const secondRowItems = [...secondRowLogos, ...secondRowLogos, ...secondRowLogos];
 
   return (
     <section className="w-full py-16 relative mb-8">
-      <div className="max-w-300 mx-auto px-6 ">
+      <div className="max-w-7xl mx-auto px-6 ">
         <Image
           src="/home/brandsBg.png"
           alt="Brand logo"
@@ -46,14 +46,14 @@ export default function BrandsTrustSection() {
             {firstRowItems.map((logo, i) => (
               <div
                 key={`first-${i}`}
-                className="shrink-0 transition-shadow p-6 h-24 w-40"
+                className="shrink-0 transition-shadow p-6 h-30 w-50 inline-flex items-center"
               >
                 <Image
                   src={logo}
                   alt="Brand logo"
                   width={120}
                   height={60}
-                  className="object-contain max-w-full max-h-full"
+                  className="object-contain w-full h-full"
                 />
               </div>
             ))}
@@ -66,14 +66,14 @@ export default function BrandsTrustSection() {
             {secondRowItems.map((logo, i) => (
               <div
                 key={`second-${i}`}
-                className="shrink-0 transition-shadow p-6 h-24 w-40"
+                className="shrink-0 transition-shadow p-6 h-30 w-50 inline-flex items-center"
               >
                 <Image
                   src={logo}
                   alt="Brand logo"
                   width={120}
                   height={60}
-                  className="object-contain max-w-full max-h-full"
+                  className="object-contain w-full h-full"
                 />
               </div>
             ))}

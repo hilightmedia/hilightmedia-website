@@ -1,21 +1,28 @@
+"use client";
+
 import { Facebook, Instagram, Mail, Phone } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const Footer = () => {
+  const router = useRouter()
   return (
     <footer className="bg-[#1F1817] text-white">
    
 
       {/* Main Footer Content */}
-      <div className="max-w-300 mx-auto px-6 py-12">
+      <div className="max-w-7xl mx-auto px-6 py-12">
            {/* CTA Banner */}
       <div className="bg-linear-to-r from-[#FF6B4A] to-[#FFA366] py-8 px-6 mb-12 rounded-2xl">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <h4 className="text-white max-w-125">
             We help brands stand out in high-impact urban spaces.
           </h4>
-          <button className="bg-white text-gray-900 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors whitespace-nowrap">
+          <button 
+          className="bg-white text-gray-900 px-8 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors whitespace-nowrap"
+          onClick={()=>router.push('/#contact')}
+          >
             Start Your Campaign
           </button>
         </div>

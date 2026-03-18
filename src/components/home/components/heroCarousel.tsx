@@ -80,7 +80,7 @@ export default function HeroCarousel() {
       className="relative w-full"
       style={{ height: "300px", perspective: "1400px" }}
     >
-      <div className="absolute bottom-0 left-0 w-full h-28 bg-gradient-to-t from-[#fff]/70 via-[#fff]/50 to-transparent pointer-events-none z-20" />
+      <div className="absolute bottom-0 left-0 w-full h-24 bg-gradient-to-t from-[#fff]/70 via-[#fff]/50 to-transparent pointer-events-none z-20" />
 
       <div
         className="absolute inset-0"
@@ -103,7 +103,7 @@ export default function HeroCarousel() {
               }}
               className="cursor-pointer select-none"
             >
-              <div className="relative w-[230px] h-[320px] rounded-[20px] overflow-hidden ">
+              <div className="relative w-[200px] h-[270px] rounded-[20px] overflow-hidden ">
                 <Image
                   src={src}
                   alt={`media-${i}`}

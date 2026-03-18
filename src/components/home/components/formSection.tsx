@@ -14,7 +14,7 @@ export default function FormSection() {
           {services.map((service, index) => (
             <div
               key={index}
-              className={`relative ${service.color} flex flex-col justify-between`}
+              className={`relative ${service.color} flex flex-col justify-between hover:scale-[1.03] hover:shadow-2xl perspective-distant hover:z-10 hover:rounded-md overflow-hidden`}
             >
               {/* Vertical Title */}
               <div className="flex-1 flex items-center justify-center min-h-[275px]">

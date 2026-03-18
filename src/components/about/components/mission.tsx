@@ -13,8 +13,37 @@ export default function MissionSection() {
           className="object-cover"
         />
       </div>
+      <div className="max-w-7xl mx-auto flex flex-col gap-4 p-6">
+        <Image
+          src="/about/mission1.png"
+          alt="mission"
+          width={600}
+          height={400}
+          className="w-full md:w-100 rounded-2xl"
+        />
+        <div className="md:mx-auto mt-8">
+          <h2 className=" text-white poppins">
+            Our Mission
+          </h2>
+          <p className="text-white/90 text-xl leading-relaxed md:max-w-140 mb-8">
+            At Hi-Light Media, our mission is to deeply understand our clients’
+            goals and business needs, identify the right target audiences, and
+            deliver advertising solutions that connect brands with users at the
+            right place and time. Through strategic planning, audience insight,
+            and high-impact outdoor and integrated media, we transform client
+            objectives into measurable real-world results.
+          </p>
+        </div>
+        <Image
+            src="/about/mission2.png"
+            alt="billboard"
+            width={500}
+            height={700}
+            className="w-full md:w-100 rounded-2xl ml-auto"
+          />
+      </div>
 
-      <div className="max-w-300 w-full mx-auto px-6">
+      {/* <div className="max-w-7xl w-full mx-auto px-6">
         <div className="relative w-fit overflow-visible mb-8">
             <Image
             src="/about/mission1.png"
@@ -44,9 +73,9 @@ export default function MissionSection() {
             className="w-full md:w-100 rounded-2xl"
           />
           </div>
-      </div>
+      </div> */}
 
-     
+
     </section>
   );
 }

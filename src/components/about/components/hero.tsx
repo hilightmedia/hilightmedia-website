@@ -23,7 +23,7 @@ export default function Hero() {
         />
       </div>
 
-      <div className="max-w-300 mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative">
+      <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative">
         <div className="flex flex-col gap-4">
           <h2>
             Join Us To Amplify Your 

@@ -1,14 +1,16 @@
 "use client";
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 export default function CtaBanner() {
+  const router = useRouter()
   return (
-    <section className="w-full mx-auto max-w-300 overflow-hidden px-6 py-14">
+    <section className="w-full mx-auto max-w-7xl overflow-hidden px-6 py-14">
       <div className="relative w-full rounded-3xl overflow-hidden min-h-115">
         {/* Background */}
         <Image
-          src="/home/ctaBg.svg"
+          src="/home/ctabg.svg"
           alt="CTA background"
           fill
           className="object-cover z-0"
@@ -37,7 +39,10 @@ export default function CtaBanner() {
             Campaign
           </h2>
 
-          <button className="mt-6 bg-white text-primary-500 font-semibold px-8 py-3 rounded-lg shadow-[0_18px_40px_rgba(0,0,0,0.18)] hover:bg-white/95 transition-colors">
+          <button 
+          className="mt-6 bg-white text-primary-500 font-semibold px-8 py-3 rounded-lg shadow-[0_18px_40px_rgba(0,0,0,0.18)] hover:bg-white/95 transition-colors"
+          onClick={()=> router.push('/#contact')}
+          >
             Book a Call
           </button>
         </div>
