@@ -79,3 +79,5 @@ export const valueSectionCards = [
       text: "Every billboard, campaign, and media plan is guided by insights, location intelligence, and performance metric not guesswork.",
     },
   ];
+
+  export const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000/api";
