@@ -142,6 +142,23 @@ button {
   animation-play-state: paused;
 } */
 
+.marquee {
+  animation: marquee 60s linear infinite;
+}
+
+/* .marquee:hover {
+  animation-play-state: paused;
+} */
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 @keyframes ctaRingSpin {
   from {
     transform: rotate(0deg);
@@ -155,4 +172,24 @@ button {
   animation: ctaRingSpin 25s linear infinite;
   transform-origin: center;
   will-change: transform;
+}
+
+.fade-section::before,
+.fade-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 10;
+}
+
+.fade-section::before {
+  left: 0;
+  background: linear-gradient(to right, white, transparent);
+}
+
+.fade-section::after {
+  right: 0;
+  background: linear-gradient(to left, white, transparent);
 }

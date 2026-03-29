@@ -13,8 +13,8 @@ export default function Visibility() {
         height={400}
         className="w-full md:w-100 rounded-2xl"
       />
-      <div className="md:mx-auto mt-8 max-w-180 w-full inline-flex flex-col justify-center">
-        <h2 className=" text-[#F84D35] poppins">
+      <div className="md:mx-auto my-10 max-w-180 w-full flex flex-col justify-center">
+        <h2 className=" text-[#F84D35] poppins mb-3">
           Get the Visibility Your Brand Needs with Hi-Light Media.
         </h2>
         <button

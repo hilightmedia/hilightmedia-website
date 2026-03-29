@@ -2,35 +2,123 @@
 
 import Image from "next/image";
 
+
 const testimonials = [
   {
-    rating: 5,
-    text: `“The team delivered a campaign that was not only creative but strategically aligned with our business goals. We saw measurable growth in brand visibility”`,
-    name: "Name",
-    role: "Business",
-    avatar: "/testimonials/t1.png",
+    text: "We’ve worked with multiple vendors before, but this team was one of the most consistent in delivery.",
+    name: "Zebronics",
+    logo: "/home/brands/zebronics.png",
   },
   {
-    rating: 5,
-    text: `“From concept to execution, their attention to detail and understanding of our market made a real difference. A reliable partner for long-term brand building.”`,
-    name: "Name",
-    role: "Business",
-    avatar: "/testimonials/t2.png",
+    text: "They were very transparent about locations, pricing, and timelines.",
+    name: "Parryware",
+    logo: "/home/brands/parryware.png",
+  },
+  {
+    text: "The campaign was executed as discussed, and the communication throughout was clear.",
+    name: "Lenovo",
+    logo: "/home/brands/lenovo.png",
+  },
+  {
+    text: "We saw good visibility for our brand in key areas.",
+    name: "Titan Eyeplus",
+    logo: "/home/brands/titan.png",
+  },
+  {
+    text: "Their understanding of local audience movement helped us choose better advertising spots.",
+    name: "Zomato",
+    logo: "/home/brands/zomato.png",
+  },
+  {
+    text: "Simple process, no complications, and the team was easy to work with.",
+    name: "Unimoni",
+    logo: "/home/brands/unimoni.png",
+  },
+  {
+    text: "They delivered what was promised, which is honestly rare in this space.",
+    name: "DCS Bank",
+    logo: "/home/brands/dcb.png",
+  },
+  {
+    text: "We liked how they kept us updated during the campaign.",
+    name: "Malabar Gold & Diamonds",
+    logo: "/home/brands/malabar.png",
+  },
+  {
+    text: "A dependable partner for outdoor advertising requirements.",
+    name: "Dr Agarwal Hospitals",
+    logo: "/home/brands/agarwal.png",
+  },
+  {
+    text: "The campaign helped us improve our visibility in the city.",
+    name: "iPlanet",
+    logo: "/home/brands/iplanet.png",
+  },
+  {
+    text: "They were open to feedback and adjusted things when needed.",
+    name: "Apollo Education",
+    logo: "/home/brands/apollo.png",
+  },
+  {
+    text: "They suggested locations that actually made sense for our target audience.",
+    name: "The TVS School",
+    logo: "/home/brands/tvs.png",
+  },
+  {
+    text: "No over-promising—just honest work and proper execution.",
+    name: "Skoda",
+    logo: "/home/brands/skoda.png",
+  },
+  {
+    text: "A reliable choice if you’re looking for outdoor advertising locally.",
+    name: "Honda",
+    logo: "/home/brands/honda.png",
+  },
+  {
+    text: "We would consider working with them again.",
+    name: "Spectrum Neet Academy",
+    logo: "/home/brands/spectrum.png",
+  },
+  {
+    text: "The LED screen advertising gave us good exposure.",
+    name: "Anuj",
+    logo: "/home/brands/anuj.png",
+  },
+  {
+    text: "Their outdoor advertising helped increase our local presence.",
+    name: "Zaara Dental",
+    logo: "/home/brands/zaara.png",
+  },
+  {
+    text: "Clear communication and timely execution made the process easy.",
+    name: "Supreme Mobiles",
+    logo: "/home/brands/supreme.png",
+  },
+  {
+    text: "They understood our requirements and delivered accordingly.",
+    name: "Zam Zam Sweets",
+    logo: "/home/brands/Zam_Zam.png",
+  },
+  {
+    text: "The team ensured seamless execution and strong brand recall.",
+    name: "Vijay TV",
+    logo: "/home/brands/vijaytv.png",
+  },
+  {
+    text: "Professional approach and consistent performance.",
+    name: "Zee Tamil",
+    logo: "/home/brands/zeetamil.png",
   },
 ];
 
-function Stars({ count = 5 }: { count?: number }) {
+const marqueeItems = [...testimonials, ...testimonials];
+
+
+function Stars() {
   return (
     <div className="flex items-center gap-1 text-primary-500">
-      {Array.from({ length: count }).map((_, i) => (
-        <svg
-          key={i}
-          width="16"
-          height="16"
-          viewBox="0 0 24 24"
-          fill="currentColor"
-          aria-hidden="true"
-        >
+      {Array.from({ length: 5 }).map((_, i) => (
+        <svg key={i} width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
           <path d="M12 2l3.09 6.26L22 9.27l-5 4.87L18.18 21 12 17.77 5.82 21 7 14.14l-5-4.87 6.91-1.01L12 2z" />
         </svg>
       ))}
@@ -38,60 +126,56 @@ function Stars({ count = 5 }: { count?: number }) {
   );
 }
 
-function TestimonialCard({
-  avatar,
-  rating,
-  text,
-  name,
-  role,
-}: {
-  avatar: string;
-  rating: number;
-  text: string;
-  name: string;
-  role: string;
-}) {
+function TestimonialCard({ text, name, logo }: any) {
   return (
-    <div className="flex flex-col sm:flex-row items-start gap-6">
-      <div className="w-36 h-36 rounded-2xl bg-black/5 overflow-hidden shrink-0">
+    <div className="shrink-0 w-80 md:w-112.5 flex flex-col md:flex-row  gap-5 p-5 rounded-2xl bg-white">
+
+      {/* Logo */}
+      <div className="w-40 h-20 flex items-center justify-center rounded-xl shrink-0">
         <Image
-          src={"/founders/karthik.png"}
-          alt=""
-          width={220}
-          height={220}
-          className="w-full h-full object-cover"
+          src={logo}
+          alt={name}
+          width={120}
+          height={60}
+          className="object-contain w-full h-full aspect-square"
         />
       </div>
 
-      <div className="max-w-md">
-        <Stars count={rating} />
-        <p className="mt-3 text-black/70 leading-relaxed">{text}</p>
-
-        <div className="mt-4 flex items-center gap-3 text-sm">
-          <span className="font-semibold text-black">{name}</span>
-          <span className="text-black/40">{role}</span>
-        </div>
+      {/* Content */}
+      <div>
+        <Stars />
+        <p className="mt-2 text-sm text-black/70 leading-relaxed line-clamp-4">
+          {text}
+        </p>
+        <p className="mt-3 font-semibold text-black text-sm">
+          {name}
+        </p>
       </div>
     </div>
   );
 }
 
+
 export default function Testimonials() {
   return (
-    <section className="w-full mx-auto max-w-7xl overflow-hidden py-15 px-6">
+    <section className="w-full max-w-7xl mx-auto py-16 overflow-hidden relative fade-section">
 
-      <h3 className="bg-primary-500 mt-3 w-fit mx-auto px-12 py-2 text-lg text-white hover:bg-primary-600 transition-colors rounded-2xl">
-        {" "}
-        Testimonials{" "}
-      </h3>{" "}
-      <h2 className="text-center my-10 noto-serif font-extralight text-primary-500">
-        100 + Happy Customers
+      {/* Heading */}
+      <h3 className="bg-primary-500 w-fit mx-auto px-12 py-2 text-lg text-white rounded-2xl">
+        Testimonials
+      </h3>
+
+      <h2 className="text-center my-10 text-primary-500">
+        100+ Happy Customers
       </h2>
 
-      <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-10 items-start">
-        {testimonials.map((t) => (
-          <TestimonialCard key={t.text} {...t} />
-        ))}
+      {/* Marquee */}
+      <div className="overflow-hidden">
+        <div className="flex gap-10 w-max marquee">
+          {marqueeItems.map((t, i) => (
+            <TestimonialCard key={i} {...t} />
+          ))}
+        </div>
       </div>
     </section>
   );

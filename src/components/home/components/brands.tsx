@@ -2,16 +2,15 @@
 
 import Image from "next/image";
 
-const firstRowLogos = [
+const allLogos = [
   "/home/brands/zomato.png",
   "/home/brands/lenovo.png",
   "/home/brands/zebronics.png",
   "/home/brands/unimoni.png",
   "/home/brands/dcb.png",
   "/home/brands/parryware.png",
-];
-
-const secondRowLogos = [
+  "/home/brands/vijaytv.png",
+  "/home/brands/zeetamil.png",
   "/home/brands/tvs.png",
   "/home/brands/agarwal.png",
   "/home/brands/titan.png",
@@ -19,7 +18,19 @@ const secondRowLogos = [
   "/home/brands/tata.png",
   "/home/brands/skoda.png",
   "/home/brands/anuj.png",
+  "/home/brands/malabar.png",
+  "/home/brands/iplanet.png",
+  "/home/brands/apollo.png",
+  "/home/brands/spectrum.png",
+  "/home/brands/zaara.png",
+  "/home/brands/supreme.png",
+  "/home/brands/Zam_Zam.png",
 ];
+
+const mid = Math.ceil(allLogos.length / 2);
+
+const firstRowLogos = allLogos.slice(0, mid);
+const secondRowLogos = allLogos.slice(mid);
 
 export default function BrandsTrustSection() {
   
@@ -46,13 +57,13 @@ export default function BrandsTrustSection() {
             {firstRowItems.map((logo, i) => (
               <div
                 key={`first-${i}`}
-                className="shrink-0 transition-shadow p-6 h-30 w-50 inline-flex items-center"
+                className="shrink-0 p-6 h-30 w-50 inline-flex items-center"
               >
                 <Image
                   src={logo}
                   alt="Brand logo"
-                  width={120}
-                  height={60}
+                  width={1000}
+                  height={1000}
                   className="object-contain w-full h-full"
                 />
               </div>
