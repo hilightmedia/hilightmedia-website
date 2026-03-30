@@ -2,12 +2,12 @@ import { Target, Building2, Handshake, LineChart } from "lucide-react";
 
 
 export const FOUNDERS = [{
-    name: "Karthik Somu",
+    name: "Karthik",
     role: "Founder",
     image: "/founders/karthik.png",
     slogan: "I MAKE\n THE RULES"
 },{
-    name: "Anbu Solairaj",
+    name: "Anbu",
     role: "Founder",
     image: "/founders/anbu.png",
     slogan: "I BREAK\n THE RULES"
