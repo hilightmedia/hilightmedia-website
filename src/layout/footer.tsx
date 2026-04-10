@@ -129,7 +129,7 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Instagram className="h-4 w-4" />
                 <a
-                  href="https://instagram.com"
+                  href="https://www.instagram.com/hilight_media/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#FFA366] transition-colors"
@@ -140,7 +140,7 @@ const Footer = () => {
               <li className="flex items-center gap-2">
                 <Facebook className="h-4 w-4" />
                 <a
-                  href="https://facebook.com"
+                  href="https://www.facebook.com/profile.php?id=100087118800188"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-[#FFA366] transition-colors"

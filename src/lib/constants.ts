@@ -2,7 +2,7 @@ import { Target, Building2, Handshake, LineChart } from "lucide-react";
 
 
 export const FOUNDERS = [{
-    name: "Karthik",
+    name: "Karthick",
     role: "Founder",
     image: "/founders/karthik.png",
     slogan: "I MAKE\n THE RULES"
