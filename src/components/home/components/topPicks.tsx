@@ -4,12 +4,17 @@ import Image from "next/image";
 
 const TopPicks = () => {
   return (
-    <section id="our-works" className="w-full mx-auto max-w-7xl overflow-hidden flex flex-col py-15 px-6">
+    <section
+      id="our-works"
+      className="w-full mx-auto max-w-7xl overflow-hidden flex flex-col py-15 px-6"
+    >
       <h3 className="bg-primary-500 mt-3 w-fit mx-auto px-12 py-2 text-lg text-white hover:bg-primary-600 transition-colors rounded-2xl">
-        OUR WORK
+        Creative Impact
       </h3>
 
-      <h2 className="text-center my-10 poppins">Top Picks</h2>
+      <h2 className="text-center my-10 poppins">
+        Building Brands That Stand Out
+      </h2>
 
       <div className="shadow-[0_18px_50px_rgba(0,0,0,0.08)] rounded-2xl w-full p-6 grid grid-cols-1 md:grid-cols-2 bg-[#F2F2F2] border-1 border-[#FFFFFF] gap-6">
         <Image
@@ -21,22 +26,23 @@ const TopPicks = () => {
           priority
         />
         <div className="flex flex-col gap-4">
-            <span className="px-4 py-1 rounded-full w-fit bg-primary-500 text-white text-xs font-semibold">
-                2025
-              </span>
+          
 
-              <h3 className="text-black/85">
-                Radio Advertising
-              </h3>
+          <h3 className="text-black/85">360 Branding Solutions</h3>
 
-              <p className="text-black/70">
-                We executed a high-impact outdoor advertising campaign for Temple
-                City Hotel in Madurai, focusing on strategic billboard placements
-                across prime city locations. The campaign was designed to capture
-                the attention of visitors and create a sense of excitement and
-                excitement.
-              </p>
-
+          <p className="text-black/70 text-sm leading-relaxed">
+            At Hi-Light Media we don’t just create brands — we bring them to
+            life with complete 360° branding solutions executed from start to
+            finish. From creative concepts and campaign planning to production,
+            printing, outdoor advertising, digital marketing, installations, and
+            final execution, every project is managed with precision,
+            creativity, and commitment. Our strength lies in delivering seamless
+            branding experiences that build trust, attract attention, and create
+            lasting impact. Whether it’s a single campaign or a full-scale brand
+            transformation, we ensure every detail reflects quality,
+            consistency, and professionalism — making your brand stand out with
+            confidence across every platform.
+          </p>
         </div>
       </div>
 
